@@ -12,7 +12,7 @@ export function renderWithTemplate(template, parentElement, data, callback) {
 }
 
 export async function loadHeaderFooter() {
-    const path = "/public/partials/"
+    const path = "/partials/"
     let element = document.querySelector("header");
     let templateStr = await loadTemplate(`${path}header.html`);
     renderWithTemplate(templateStr, element)
