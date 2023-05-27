@@ -28,11 +28,11 @@ body {
     font-family: var(--font-body);
     margin: 0;
     padding: 0;
-    min-width: 300px;
+    min-width: 350px;
 }
 
 main {
-    width: 400px;
+    width: 300px;
     margin: auto;
     color: var(--primary-color);
     padding: 25px;
@@ -47,6 +47,7 @@ main {
 header, footer {    
     background-color: var(--secondary-color);
     color: var(--accent-2);
+    margin: 0;
     padding: 15px;
     text-align: center;
     max-width: 100%;
@@ -68,7 +69,7 @@ footer {
 
 #weather, #news {
     margin: 0 auto;
-    width: 300px;
+    width: 280px;
 }
 
 #temperature {
