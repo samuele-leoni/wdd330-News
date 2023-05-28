@@ -13,6 +13,7 @@
 
     /* sizes */
     --font-base: 20px;
+    --smaller-font: 0.6em;
     --small-font: 0.8em;
     --large-font: 1.2em;
 }
@@ -107,4 +108,8 @@ footer {
     background-color: var(--accent-2);
     border: #171D1CAA 1px solid;
     border-radius: 3px;
+}
+
+.small-text {
+    font-size: var(--smaller-font);
 }
