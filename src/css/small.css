@@ -13,6 +13,7 @@
 
     /* sizes */
     --font-base: 20px;
+    --smaller-font: 0.6em;
     --small-font: 0.8em;
     --large-font: 1.2em;
 }
@@ -77,7 +78,11 @@ footer {
 }
 
 #weather-icon {
-    font-size: 100px;
+    height: 100px;
+    background-color: #5863F830;
+    width: 100px;
+    border-radius: 50%;
+    border: #171D1C22 1px solid;
     margin-right: 35px;
 }
 
@@ -103,4 +108,8 @@ footer {
     background-color: var(--accent-2);
     border: #171D1CAA 1px solid;
     border-radius: 3px;
+}
+
+.small-text {
+    font-size: var(--smaller-font);
 }
