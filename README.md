@@ -6,7 +6,7 @@ This is a website that will use two APIs to fetch news and weather.
 
 ### APIs
 - [NewsAPI](https://newsapi.org/)
-- [Free Weather API](https://open-meteo.com/) 
+- [OpenWeather](https://openweathermap.org/) 
 
 ### Features
 Most recent news are shown but the News Search Bar can be used to search a news using keywords. Weather location will be automatically retrieved by the browser or picked using the weather search bar.
