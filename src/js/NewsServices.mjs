@@ -13,7 +13,12 @@ export default class NewsServices {
     constructor() {
     }
     async getRecentNews() {
-        const response = await fetch(`${baseURL}top-headlines?country=us&apiKey=${apiKey}`);
+        const response = await fetch(`${baseURL}latest_headlines?countries=US&lang=en`,{
+            method: 'GET',
+            headers: {
+                'x-api-key': apiKey,
+            }
+        });
         const data = await convertToJson(response);
         console.log(data);
         return data.articles;
