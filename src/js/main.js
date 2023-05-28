@@ -4,6 +4,8 @@ import WeatherServices from "./WeatherServices.mjs";
 import News from "./News.mjs";
 import NewsServices from "./NewsServices.mjs";
 
+loadHeaderFooter();
+
 const weatherDataSource = new WeatherServices();
 
 let weatherLocation = document.querySelector("#weather-location-input");
@@ -28,5 +30,3 @@ const newsDataSource = new NewsServices();
 const news = new News(newsDataSource);
 
 news.init("#news-container");
-
-loadHeaderFooter();
