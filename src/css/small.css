@@ -96,6 +96,10 @@ footer {
     left: 105px;
 }
 
+#unit-selection {
+    margin-left: 15px;
+}
+
 #weather-location-input {
     width: 100px;
 }
