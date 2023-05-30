@@ -34,6 +34,10 @@
         margin: auto;
     }
 
+    #weather-location-input {
+        width: 125px;
+    }
+
     /* NEWS */
 
     #news {

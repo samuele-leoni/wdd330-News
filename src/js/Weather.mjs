@@ -11,8 +11,14 @@ export default class Weather {
         this.dataSource = dataSource;
     }
 
-    async init(selector, city, metric=false) {
+    async init(selector, city="London", metric = false) {
         this.weatherData = await this.dataSource.getCurrentWeather(city, metric);
+        this.renderWeather(selector);
+    }
+
+    async initByCoords(selector, citySelector, lat=0, long=0, metric = false) {
+        this.weatherData = await this.dataSource.getCurrentWeatherByCoords(lat, long, metric);
+        citySelector.value = this.weatherData.name;
         this.renderWeather(selector);
     }
 
