@@ -17,4 +17,9 @@ export default class WeatherServices {
         const data = await convertToJson(response);
         return data;
     }
+    async getCurrentWeatherByCoords(lat, lon, metric) {
+        const response = await fetch(`${baseURL}weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=${metric? "metric" : "imperial"}`);
+        const data = await convertToJson(response);
+        return data;
+    }
 }

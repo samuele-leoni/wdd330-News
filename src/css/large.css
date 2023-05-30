@@ -1,5 +1,5 @@
 @media only screen and (min-width: 60em) {
     #news-search-input, #weather-location-input{
-        width: 200px;
+        width: 160px;
     }
 }
