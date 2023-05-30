@@ -5,7 +5,7 @@ Final Project for WDD330
 This is a website that will use two APIs to fetch news and weather.
 
 ### APIs
-- [NewsCatcheeAPI](https://newscatcherapi.com/)
+- [NewsCatcherAPI](https://newscatcherapi.com/)
 - [OpenWeather](https://openweathermap.org/) 
 
 ### Features
