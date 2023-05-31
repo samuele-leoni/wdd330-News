@@ -1,5 +1,5 @@
 function newsTemplate(newsData) {
-    const dateTime = new Date(newsData.webPublicationDate).toLocaleString();
+    const dateTime = new Date(newsData.webPublicationDate).toUTCString();
     return `<div class="news-element">
         <p class="small-text">${dateTime}</p>
         <h3>${newsData.webTitle}</h3>
@@ -14,8 +14,8 @@ export default class News {
         this.dataSource = dataSource;
     }
 
-    async init(selector) {
-        this.newsData = await this.dataSource.getRecentNews();
+    async init(selector, page=1, filters={}) {
+        this.newsData = await this.dataSource.getNews(page, filters);
         this.renderNews(selector);
     }
 

@@ -20,3 +20,13 @@ export async function loadHeaderFooter() {
     templateStr = await loadTemplate(`${path}footer.html`);
     renderWithTemplate(templateStr, element)
 }
+
+export function filterBuilder(type, filter) {
+    let filterString = "";
+    if (filter) {
+        filterString = `&${type}=${filter}`
+    }
+    return filterString;
+}
+
+export const convertFilterString = str => str.replace(/[A-Z]/g, letter => `-${letter.toLowerCase()}`);

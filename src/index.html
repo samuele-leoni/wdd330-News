@@ -5,6 +5,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script defer src="/js/main.js" type="module"></script>
+    <script defer src="/js/news.js" type="module"></script>
+    <script defer src="/js/weather.js" type="module"></script>
     <link rel="stylesheet" href="/css/small.css">
     <link rel="stylesheet" href="/css/medium.css">
     <link rel="stylesheet" href="/css/large.css">
@@ -30,16 +32,48 @@
         <section id="news">
             <div id="news-heading">
                 <h1>News</h1>
+                <div id="news-navigation">
+                    <button class="news-navigation" id="news-navigation-previous">&#x2039;</button>
+                    <input type="number" class="search" id="news-navigation-input" placeholder="Page" min="1">
+                    <button class="search" id="goto-page">&#x1F50D;</button>
+                    <button class="news-navigation" id="news-navigation-next">&#x203A;</button>
+                </div>
                 <div id="news-search">
                     <input type="text" class="search" id="news-search-input" placeholder="Search">
                     <button class="search" id="news-search-button">&#x1F50D;</button>
                 </div>
             </div>
 
-            <div id="news-filter">
-            </div>
+            
 
         </section>
+        <div id="show-filters">
+            <button id="show-filters-button">Show Filters</button>
+        </div>
+        <div id="news-filters">
+            <div class="news-filter" id="section">
+                <label class="filter-labels" for="section-filter">Section</label>
+                <input type="text" id="section-filter" placeholder="Section">
+            </div>
+            <div class="news-filter" id="from-date">
+                <label class="filter-labels" for="from-date-filter">From</label>
+                <input type="date" id="from-date-filter">
+            </div>
+            <div class="news-filter" id="to-date">
+                <label class="filter-labels" for="to-date-filter">To</label>
+                <input type="date" id="to-date-filter">
+            </div>
+            <div class="news-filter" id="order-by">
+                <label class="filter-labels" for="order-by-filter">Order By</label>
+                <select id="order-by-filter">
+                    <option value="none">None</option>
+                    <option value="relevance">Relevance</option>
+                    <option value="newest">Newest</option>
+                    <option value="oldest">Oldest</option>
+                </select>
+            </div>
+            <button id="apply-filters">Apply</button>
+        </div>
         <div id="news-container">
         </div>
     </main>
