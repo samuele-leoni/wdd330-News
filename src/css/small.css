@@ -117,3 +117,28 @@ footer {
 .small-text {
     font-size: var(--smaller-font);
 }
+
+#news-navigation {
+    margin-bottom: 10px;
+}
+
+#news-navigation-input {
+    width: 50px;
+}
+
+.filter-labels {
+    font-size: var(--small-font);
+    margin-right: 10px;
+}
+
+#news-filters {
+    display: none;
+}
+
+#show-filters {
+    margin-top: 10px;
+}
+
+#section-filter {
+    width: 120px;
+}
