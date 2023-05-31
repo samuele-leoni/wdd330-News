@@ -1,12 +1,10 @@
 function newsTemplate(newsData) {
-    const dateTime = new Date(newsData.published_date).toLocaleString();
-    const author = newsData.author ? newsData.author : "Unknown Author";
+    const dateTime = new Date(newsData.webPublicationDate).toLocaleString();
     return `<div class="news-element">
         <p class="small-text">${dateTime}</p>
-        <h3>${newsData.title}</h3>
-        <p>${newsData.excerpt}</p>
-        <p class="small-text">${author}</p>
-        <a href="${newsData.link}">Read More</a>
+        <h3>${newsData.webTitle}</h3>
+        <p class="small-text">${newsData.sectionName}</p>
+        <a href="${newsData.webUrl}">Read More</a>
     </div>`;
 }
 

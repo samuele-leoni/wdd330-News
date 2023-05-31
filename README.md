@@ -5,8 +5,8 @@ Final Project for WDD330
 This is a website that will use two APIs to fetch news and weather.
 
 ### APIs
-- [NewsCatcherAPI](https://newscatcherapi.com/)
-- [OpenWeather](https://openweathermap.org/) 
+- [The Guardian OpenPlatform API](https://newscatcherapi.com/)
+- [OpenWeather API](https://openweathermap.org/) 
 
 ### Features
 Most recent news are shown but the News Search Bar can be used to search a news using keywords. Weather location will be automatically retrieved by the browser or picked using the weather search bar.
