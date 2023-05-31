@@ -24,7 +24,6 @@ export default class NewsServices {
         const url = `${baseURL}search?page=${page}${filterString}&api-key=${apiKey}`;
         const response = await fetch(url);
         const data = await convertToJson(response);
-        console.log(url);
         return data.response.results;
     }
 
