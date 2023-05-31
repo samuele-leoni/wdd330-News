@@ -43,6 +43,7 @@ const toDateFilter = document.querySelector("#to-date-filter");
 const orderByFilter = document.querySelector("#order-by-filter");
 const showFiltersButton = document.querySelector("#show-filters-button");
 const filtersDiv = document.querySelector("#news-filters");
+const clearFiltersButton = document.querySelector("#clear-filters");
 
 showFiltersButton.addEventListener("click", () => {
 
@@ -65,22 +66,28 @@ x.addEventListener("change", showFilterDiv)
 
 const filters = {}
 
-searchButton.addEventListener("click", () => {
-    filters.q = searchInput.value;
-    pageNumber.value = 1;
-    news.init("#news-container", pageNumber.value, filters);
-});
-
-applyFiltersButton.addEventListener("click", () => {
+function applyFilters() {
     if (sectionFilter.value) {
         filters.section = sectionFilter.value;
     }
+    else {
+        delete filters.section;
+    }
+
     if (fromDateFilter.value) {
         filters.fromDate = fromDateFilter.value;
     }
+    else {
+        delete filters.fromDate;
+    }
+
     if (toDateFilter.value) {
         filters.toDate = toDateFilter.value;
     }
+    else {
+        delete filters.toDate;
+    }
+
     if (orderByFilter.value) {
         if (orderByFilter.value === "none") {
             delete filters.orderBy;
@@ -89,6 +96,38 @@ applyFiltersButton.addEventListener("click", () => {
             filters.orderBy = orderByFilter.value;
         }
     }
+}
+
+function clearFilters() {
+    sectionFilter.value = "";
+    fromDateFilter.value = "";
+    toDateFilter.value = "";
+    orderByFilter.value = "none";
+    delete filters.section;
+    delete filters.fromDate;
+    delete filters.toDate;
+    delete filters.orderBy;
+}
+
+clearFiltersButton.addEventListener("click", () => {
+    clearFilters();
+    pageNumber.value = 1;
+    news.init("#news-container", pageNumber.value, filters);
+});
+
+searchButton.addEventListener("click", () => {
+    if (searchInput.value){
+        filters.q = searchInput.value;
+    }
+    else {
+        delete filters.q;
+    }
+    pageNumber.value = 1;
+    news.init("#news-container", pageNumber.value, filters);
+});
+
+applyFiltersButton.addEventListener("click", () => {
+    applyFilters();
     pageNumber.value = 1;
     news.init("#news-container", pageNumber.value, filters);
 });
